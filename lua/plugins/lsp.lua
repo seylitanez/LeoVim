@@ -70,6 +70,9 @@ return {
           local lua_opts = lsp.nvim_lua_ls()
           require("lspconfig").lua_ls.setup(lua_opts)
         end,
+        tsserver = function()
+          require("lspconfig").tsserver.setup{}
+        end,
       },
     })
 

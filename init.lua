@@ -30,3 +30,18 @@ vim.cmd('hi IlluminatedWordWrite guibg=none gui=underline')
 require('nvim-highlight-colors').setup({
   enable_named_colors = false,
 })
+
+-- save file using ctrl + s
+vim.keymap.set("n", "<C-s>", ":w<CR>")
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a")
+vim.keymap.set("v", "<C-s>", "<Esc>:w<CR>a")
+
+
+-- Telescope lsp_definition 
+
+vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { silent = true })
+vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { silent = true })
+vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { silent = true })
+vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })
+vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true })

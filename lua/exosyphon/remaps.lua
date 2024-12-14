@@ -169,3 +169,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   pattern  = "*",
   callback = function() vim.highlight.on_yank { timeout = 200 } end
 })
+
+
+-- surround
+vim.keymap.set("n", "ys", "<Plug>(Ysurround)", { desc = "Surround" })
+vim.keymap.set("n", "ds", "<Plug>(Ysurround)", { desc = "Surround" })
+vim.keymap.set("n", "cs", "<Plug>(Ysurround)", { desc = "Surround" })
+vim.keymap.set("n", "S", "<Plug>(Ysurround)", { desc = "Surround" }) 
+
+
+-- telescope
+vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
+vim.keymap.set("n", "<C-f>", "<cmd>Telescope live_grep<cr>", { desc = "Live Grep" })
+
